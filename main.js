@@ -47,6 +47,12 @@ for(let i = 0; i < positiveNumbers.length; i++){
   }
 }
 
+for(const x of positiveNumbers){
+  if(x % 2 ===0){
+    console.log(x);
+  }
+}
+
 
 // Challenge 4
 // Console.log out the even numbers in the following array, INCLUDING the negative ones. There should be four total printings.
@@ -68,11 +74,19 @@ const sliceEndIndex = 10;
 const partialsymmetricalCapitals = symmetricalCapitals.slice(sliceStartIndex, sliceEndIndex);
 console.log(partialsymmetricalCapitals);
 
+symmetricalCapitals.splice(0,2);
+symmetricalCapitals.splice()
+
 // Challenge 6
 // Add a value (your choice!) to the start of the following array and two values (of your choice) to the end simply by adding them in the following line, and then console.log out each value individually.
 const fibonacciNumbers = [1, 1, 2, 3, 5, 8, 13];
 fibonacciNumbers.unshift(5000);
-console.log(fibonacciNumbers);
+fibonacciNumbers.push(1000, 2000);
+
+for(const fib of fibonacciNumbers){
+  console.log(fib);
+}
+
 
 
 // Challenge 7
@@ -92,92 +106,61 @@ for(let i = 0; i < newArray2; i++){
   newArray2.push(6);
   console.log(newArray2[i]);
 }
+const b =[];
+b.push(1);
+b.push(1);
+b.push(1);
+b.push(1);
+b.unshift(5);
+b.unshift(5);
+
 
 
 // Challenge 9
 // Loop through the `students` array from Challenge 1, starting at index 3 and ending at index 10 (INCLUSIVE), logging out each value individually.
-const students1 = [
-  'Tre',
-  'Sonny',
-  'Crystal',
-  'Ilyas',
-  'Greg',
-  'Fernando',
-  'Timothy',
-  'Patrick',
-  'Steve',
-  'Jimothy',
-  'Pat',
-  'Arnold',
-  'Andy'
-];
-const sliceStartStudentIndex = 2;
-const sliceEndStudentIndex = 11;
-const partialstudents1 = students1.slice(sliceStartStudentIndex, sliceEndStudentIndex);
-console.log(partialstudents1);
-
+for(let i = 3; i <= 10; i++){
+  console.log(students[i]);
+}
 
 
 // Challenge 10
 // Loop through the `students` array from Challenge 1, making a COPY of the array, starting at index 3 and ending at index 10 (INCLUSIVE). This is very similar to string building; create a new array, loop through the old one, and put values from the original in the new one. Then log out each value of the copy indivudally.
-const students2 = [
-  'Tre',
-  'Sonny',
-  'Crystal',
-  'Ilyas',
-  'Greg',
-  'Fernando',
-  'Timothy',
-  'Patrick',
-  'Steve',
-  'Jimothy',
-  'Pat',
-  'Arnold',
-  'Andy'
-];
-const students3 = ['Tre', 'Sonny', 'Arnold', 'Andy'];
-const student1 = students2.concat(students3);
-const spliceStartStudent2Index = 2;
-const spliceEndStudentsGroupIndex = 11;
-const newGroup = students1.splice(sliceStartStudent2Index, sliceEndStudentsGroupIndex);
-console.log(students1);
+let studentsCopy =[];
+for(let i = 3; i <=10; i++){
+  console.push(students[i]);
+}
+for(const y of studentsCopy){
+  console.log(y);
+}
 
 
 
 // Challenge 11
 // Make a COPY of the `students` array *using .slice*, starting at index 3 and ending at index 10 (INCLUSIVE), then log out each value of the copy individually. THEN log out each value of the original array. Notice that the original array didn't get any values taken out of it, because `slice` does NOT modify the original array.
-const students4 = [
-  'Tre',
-  'Sonny',
-  'Crystal',
-  'Ilyas',
-  'Greg',
-  'Fernando',
-  'Timothy',
-  'Patrick',
-  'Steve',
-  'Jimothy',
-  'Pat',
-  'Arnold',
-  'Andy'
-];
-const sliceStartStudentIndex1 = 3;
-const sliceEndStudentsGroupIndex1 = 11;
-const newGroup = students4.splice(sliceStartStudent3Index, sliceEndStudentsGroupIndex1);
-console.log(newGroup);
+const studentsCopy1 = students.slice(3, 11);
+for(const y of studentsCopy){
+  console.log(y);
+}
 
 // Challenge 12
 // Pull the items at indices 4-6 (inclusive) from the following array using .splice (NOT .slice!), then console.log out each item from the ORIGINAL array. Note that .splice DOES change the original array.
 let dinosaurs = ['Velociraptor', 'T-Rex', 'Stegosaurus', 'Triceratops', 'Dimetrodon', 'Allosaur', 'Spinosaurus', 'Gigantosaur']
 const spliceStartDinosaursIndex = 4;
-const numItemsToRemoveDinosaurs = 6;
+const numItemsToRemoveDinosaurs = 3;
 sandwich.splice(spliceStartDinosaursIndex, numItemsToRemoveDinosaurs);
 console.log(dinosaurs);
+
+dinosaurs.splice(4, 3);
+
+for(const y of dinosaurs){
+  console.log(y);
+}
 
 
 // Challenge 13
 // Use .join to change the dinosaur strings from the above array into one string with a '*' string as the "separator". Then console.log out that string.
-console.log(dinosaurs.join('*'));
+const dinoStr = dinosaurs.join('*');
+console.log(dinoStr);
 
 // Challenge 14
 // Use .reverse to reverse the dinosaur array and then log out the original array. .reverse DOES change the original array.
@@ -190,4 +173,7 @@ console.log(dinosaurs);
 const primaries = ['red', 'yellow', 'blue'];
 const secondaries = ['orange', 'green', 'purple'];
 const priSec = primaries.concat(secondaries);
-console.log(priSec);
+
+for(const y of priSec){
+  console.log(y);
+}
